@@ -1,0 +1,110 @@
+/* general styling */
+*{
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+html,body{
+	margin:0;
+	padding: 0;
+     background:linear-gradient(to right,#58b4ae 57%,#f6f578)
+      }
+ :root{
+ 	--paddin:10px 20px;
+ 	--size:1em;
+ }
+
+
+/* ------------ */
+/* ------------parent container styling */
+
+#parent-todo-container{
+	display: flex;
+	justify-content: center;
+}
+/* ------------------*/
+
+/* header and container of todo-list */
+#todo-container{margin-top: 70px;
+	overflow: hidden; 
+	box-shadow: 1px 2px 10px rgba(0,0,0,0.34),-1px 1px 3px rgba(0,0,0,0.12);
+min-width: 420px;
+}
+#header{
+	color:white;
+	position: relative;
+	font-size: 1.2em;
+	letter-spacing: 1px;
+	font-weight: 600;
+	background: #035aa6;
+	padding:10px 20px;
+}
+#add-todo{
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	top:10px;
+}
+/*-------------------------------*/
+/* user input section */
+input{
+	border: none;
+	width: 100%;
+	padding: 15px 20px;
+	font-weight: 400;
+	color:#035aa6;
+	font-size: var(--size);
+	background: #ebe6e6;
+}
+/* user input styling */
+.user-input{
+	display:block;
+}
+.user-display{
+	display:none;
+}
+/*-------------------*/
+/*----------------------------*/
+
+
+#todo-list{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#todo-list li{
+	margin: 0;
+	position: relative;
+	padding: var(--paddin);
+	cursor: pointer;
+	transition:padding 0.4s;
+}
+li span{
+	padding:10px 10px;
+	position:absolute;
+	outline: none;
+	top:0;
+	left:-35px;
+	background:#bb3b0e;
+	color: white;
+	opacity:0.6;
+	z-index: 10;
+	transition:all 0.4s;
+}
+#todo-list li:hover{
+	padding-left:40px;
+}
+.cutout{
+	text-decoration: line-through;
+	color:grey;
+}
+li:hover span{
+	left:-2px;
+	opacity: 1;
+}
+#todo-list li:nth-child(odd){
+	background: white;
+}
+#todo-list li:nth-child(even){
+background: #ebe6e6;
+
+}
